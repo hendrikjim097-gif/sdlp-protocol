@@ -1,12 +1,18 @@
-# EXECUTIVE SUMMARY: SPATIAL DISTRIBUTED LEDGER PROTOCOL (SDLP)
-**Arsitektur Ledger Terdistribusi Berbasis Ruang, Ringan, dan Low-Latency untuk Infrastruktur IoT & Perangkat Mobile**
+# SDLP Protocol Engine
+> **Spatial Distributed Ledger Protocol - Secure P2P Wire Representation & Toroidal Benchmark**
 
-### **Latar Belakang & Masalah Utama**
-Ledger terdistribusi (DLT) dan Blockchain saat ini mengalami masalah pembengkakan data memori dan pemborosan bandwidth jaringan. Protokol tradisional bersifat "buta ruang"—mereka tidak mengenalkan geografi perangkat ke dalam sirkuit konsensus, sehingga pengiriman data koordinat spasial bersifat mentah, tidak teroptimasi, dan rentan terhadap lonjakan asimetri data bit saat melintasi batas topologi jaringan fisik.
+SDLP adalah mesin protokol jaringan peer-to-peer terdistribusi tingkat rendah yang menggunakan topologi ruang metrik toroidal diskret berdimensi 3 (\(\mathcal{T}^3\)) untuk menyelesaikan tabrakan status secara deterministik tanpa interaksi jaringan eksternal.
 
-### **Solusi SDLP: Spatial-Aware Ledger**
-**Spatial Distributed Ledger Protocol (SDLP)** memecahkan masalah ini dengan mengintegrasikan topologi Torus Spasial 3D berukuran berhingga berbasis biner Gray-Code langsung ke dalam inti sirkuit ledger.
+## ⚡ High-Speed Production Benchmark
+Mesin otomasi pembukuan spasial ini telah divalidasi dan diuji menggunakan profil rilis teroptimasi (`--release`) di atas perangkat seluler:
+* **Host Pengujian:** Xiaomi Redmi Note 9 (MediaTek Helio G85 ARM CPU, Terisolasi via Termux)
+* **Kapasitas Uji:** 100.000 Mutasi Data Spasial Secara Sekaligus
+* **Hasil Performa Komputasi:** **~97.293,48 TPS (Transactions Per Second)**
 
-### **Dua Pilar Nilai Jual Utama SDLP**
-1. **Kompresi Ekstrem Delta Encoding 16-Bit (Hemat Bandwidth 87.04%)**: Mengurangi ukuran total paket data di kabel jaringan menjadi hanya 14 Byte. Hasil pengujian pada ARM CPU via Termux membuktikan penghematan bandwidth fisik jaringan sebesar 87.04% per transaksi mutasi data.
-2. **Anti-Discontinuity Spasial (Batas Kritis Ruang Toroidal)**: Menggunakan pemetaan Jarak Hamming di atas koordinat biner refleksif (Gray-Code). Menghilangkan lonjakan distorsi spasial semu sehingga jaringan P2P dapat melakukan peruteran secara deterministik tanpa risiko deadlock.
+## 🛡️ Fitur Utama Terintegrasi
+1. **AEAD AES-256-GCM Wire Protection:** Mengunci 10-byte data awal kerangka jaringan sebagai komponen *Additional Authenticated Data* (AAD) untuk mencegah manipulasi bit pada level kabel jaringan.
+2. **16-Bit Delta Compression:** Memeras koordinat spasial 3D dari ukuran standar 12-Byte menjadi hanya 2-Byte murni untuk menghemat bandwidth fisik hingga 83.33%.
+3. **Deterministic Spiral Probing:** Mekanisme resolusi tabrakan data berbasis matematika donat terbalik agar setiap node menghasilkan keputusan konvergen yang sama tanpa perlu komunikasi antar-jaringan.
+
+## 📄 Lisensi
+Proyek ini dilisensikan di bawah **MIT License**.
